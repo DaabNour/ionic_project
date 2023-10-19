@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Car details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="car-details">
+    <div class="hero-image">
+      <img src="https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/BMW-2-Series-Gran-Coupe-271220221147.jpg&w=872&h=578&q=75&c=1" alt="Car image">
+    </div>
+
+    <ion-list class="car-details-list">
+      <ion-item class="car-model">
+        <ion-label>Model</ion-label>
+        <ion-text>{{ selectedannonce.model }}</ion-text>
+      </ion-item>
+
+      <ion-item class="car-color">
+        <ion-label>Color</ion-label>
+        <ion-text>{{ selectedannonce.color }}</ion-text>
+      </ion-item>
+
+      <ion-item class="car-price">
+        <ion-label>Price</ion-label>
+        <ion-text>{{ selectedannonce.price }} €</ion-text>
+      </ion-item>
+
+      <ion-item class="car-km">
+        <ion-label>Kilometers</ion-label>
+        <ion-text>{{ selectedannonce.km }} km</ion-text>
+      </ion-item>
+
+      <ion-item class="car-category">
+        <ion-label>Category</ion-label>
+        <ion-text>{{ selectedannonce.category }}</ion-text>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

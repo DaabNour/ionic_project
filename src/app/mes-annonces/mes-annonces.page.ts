@@ -2,22 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { AnnoncesServiceService } from '../annonces-service.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-mes-annonces',
+  templateUrl: './mes-annonces.page.html',
+  styleUrls: ['./mes-annonces.page.scss'],
 })
-export class HomePage implements OnInit {
-  tabannonces :any;
- 
+export class MesAnnoncesPage implements OnInit {
+  tabannonces: any;
+  user:any;
 
   constructor(private anonceService:AnnoncesServiceService) { }
 
+  
   getAllAnnonces() {
     this.tabannonces = [];
     this.anonceService.getAllAnnonces().subscribe({
       next: (response: {[key: string]: any}) => {
         for (const key in response) {
-          this.tabannonces.push({ id: key, ...response[key] });
+          if (response[key].user === this.user) {
+            this.tabannonces.push({ id: key, ...response[key] });
+          }
         }
         console.log(this.tabannonces);
       },
@@ -27,12 +30,10 @@ export class HomePage implements OnInit {
     });
   }
 
-  logout(){
-    localStorage.removeItem("username")
-  }
 
   ngOnInit() {
-  this.getAllAnnonces()
+    this.user = localStorage.getItem('username');
+    this.getAllAnnonces();
   }
-}
 
+}

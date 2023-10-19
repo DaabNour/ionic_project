@@ -1,0 +1,21 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="parent">
+    <div class="div1">
+      <div class="container">
+        <div class="heading">Sign Up</div>
+        <form action="" class="form">
+          <input required="" [(ngModel)]="firstname" class="input" type="firstname" name="firstname" id="firstname" placeholder="Firstname">
+          <input required="" [(ngModel)]="lastname" class="input" type="lastname" name="lastname" id="lastname" placeholder="Lastname">
+          <input required="" [(ngModel)]="email" class="input" type="email" name="email" id="email" placeholder="E-mail">
+          <input required="" [(ngModel)]="phone" class="input" type="phone" name="phone" id="phone" placeholder="Phone Number">
+          <input required="" [(ngModel)]="password" class="input" type="password" name="password" id="password" placeholder="Password">
+          <span class="signup"  (click)="register()" routerLink="/login">Sign Up</span>
+        </form>
+          <span class="signin" routerLink="/login">Sign In</span>
+      </div>
+       </div>
+    </div>
+</ion-content>
+

@@ -1,0 +1,15 @@
+
+ 
+
+<ion-content  [fullscreen]="true">
+      <div class="container">
+    <div class="heading">Sign In</div>
+    <form action="" class="form">
+      <input required=""  [(ngModel)]="email"class="input" type="email" name="email" id="email" placeholder="E-mail" >
+      <input required="" [(ngModel)]="password" class="input" type="password" name="password" id="password" placeholder="Password">
+      <span class="login-button" (click)="login()"  >Sign In</span>
+    </form>
+         <span class="signup" routerLink="/register" >Sign Up</span>
+  </div>
+
+</ion-content>

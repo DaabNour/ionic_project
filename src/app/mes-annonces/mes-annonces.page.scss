@@ -1,0 +1,35 @@
+ion-toolbar {
+    padding: 1rem 0.3rem;
+    text-align:center;
+    --background: #407C87 ;
+    padding-bottom: 0;
+    --color : white ;
+  }
+
+  .ads-list {
+    margin-top: 20px;
+  }
+  
+  .ads-list ion-card {
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .ads-list ion-card-content {
+    padding: 20px;
+  }
+  
+  .ads-list .Model {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .ads-list .Price {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .ads-list .KM {
+    font-size: 16px;
+    color: #666;
+  }

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Add a Car</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin">
+    <ion-card class="add-car-card">
+      <ion-card-header>
+        <ion-card-title>Add a Car</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="model" type="text" placeholder="Car Model"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="color" type="text" placeholder="Car color"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="price" type="number" label="Price" placeholder="Car Price"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="km" type="number" label="Km" placeholder="Km"></ion-input>
+        </ion-item>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Category</ion-label>
+            <ion-select [(ngModel)]="Category" aria-label="Category" interface="popover" placeholder="Select A Category">
+              <ion-select-option value="Vente">Vente</ion-select-option>
+              <ion-select-option value="Location">Location</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+
+      <ion-footer>
+        <ion-button class="add-button" type="submit" expand="block" value="Add" routerLink="/home" (click)="addNewAnnonce()">Add</ion-button>
+      </ion-footer>
+    </ion-card>
+  </div>
+</ion-content>
